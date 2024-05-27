@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+* p {
+  letter-spacing: 0.5px;
+  font-family: teks;
+}
+@font-face {
+  font-family: kedua;
+  src: url("font/nasalization/nasalization-rg.otf");
+}
+@font-face {
+  font-family: utama;
+  src: url("font/ethnocentric/ethnocentric_rg.otf");
+}
+@font-face {
+  font-family: teks;
+  src: url("font/roboto/Roboto-Medium.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* background navigasi */
+header {
+  height: 3em;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+}
+.header {
+  background: rgba(8, 8, 8, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding-inline: 36px;
+  height: 100%;
+}
+/* end */
+/* Inti */
+.header .inti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+.header .inti img {
+  height: 2.4em;
+  width: 2.4em;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), inset 0 0 10px red;
+}
+.header .inti h1 {
+  font-family: utama;
+  font-size: 30px;
+  color: red;
+  padding: 0 8px;
+}
+/* end */
+/* nav */
+.header nav ul {
+  display: flex;
+  flex-grow: 1;
+  height: 3em;
+}
+.header nav ul li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.header nav ul li:hover {
+  background: red;
+  color: white;
+}
+.header nav ul:hover li:not(:hover) {
+  opacity: 0.5;
+}
+.header nav ul li a {
+  color: white;
+  font-family: kedua;
+  text-align: center;
+  padding: 0.6em 1em;
+}
+/* end */
+/* beranda */
+.beranda {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("wallpaperbetter.jpg");
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.beranda h1 {
+  font-size: 5em;
+  color: red;
+  font-family: utama;
+}
+.beranda p {
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.5em;
+}
+/* end */
+/* main */
+main {
+  background: #070707;
+  height: auto;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section {
+  min-height: 100vh;
+  margin: 0 2em;
+  padding: 4em 3em 0em 3em;
+}
+/* grid */
+main #gun,
+#hand-weapons {
+  display: grid;
+  grid-template-areas:
+    "a a"
+    "b c";
+    grid-template-rows: 5em auto;
+    grid-template-columns: auto minmax(300px, 25%);
+}
+main #weapons {
+  display: grid;
+  grid-template-areas:
+    "a a"
+    "c b";
+    grid-template-rows: 5em auto;
+    grid-template-columns: minmax(300px, 25%) auto;
+}
+main .tittle{
+  grid-area: a;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: utama;
+  font-size: 2em;
+}
+main .isian{
+  grid-area: b;
+}
+main  img {
+  grid-area: c;
+}
+/* end */
+section aside img {
+  height: 200px;
+  width: 200px;
+}
+section h1,
+p {
+  color: white;
+}
+section *,
+.merah {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+section *.visible,
+.merah.visible {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+/* end */
+/* footer */
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: #070707;
+}
+.merah {
+  height: 200px;
+  width: 100%;
+  background-color: red;
+}
+footer h1 {
+  color: white;
+  font-family: utama;
+}
+/* end */
